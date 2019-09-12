@@ -49,7 +49,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="b1x-R4-szv">
-                                <rect key="frame" x="114" y="161" width="187" height="30"/>
+                                <rect key="frame" x="113.5" y="161" width="187" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMh-FY-d1j">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
