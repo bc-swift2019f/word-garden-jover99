@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Treat below like they're going to eventually have information in there, we don't currently have a value to initialize it with.
+    
     @IBOutlet weak var userGuessLabel: UILabel!
     @IBOutlet weak var guessedLetterField: UITextField!
     @IBOutlet weak var guessLetterButton: UIButton!
@@ -19,6 +21,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guessLetterButton.isEnabled = false
+        playAgainButton.isHidden = true
     }
     
     func updateUIAfterGuess() {
@@ -27,6 +31,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func guessLetterFieldChanged(_ sender: UITextField) {
+        if let letterGuessed = guessedLetterField.text?.last {
+            guessedLetterField.text = "\(letterGuessed)"
+            guessLetterButton.isEnabled = true
+        } else {
+            //Disable the button if I don't have a single character in the guessedLetterField
+            guessLetterButton.isEnabled = false
+        }
     }
     
     @IBAction func doneKeyPressed(_ sender: UITextField) {
